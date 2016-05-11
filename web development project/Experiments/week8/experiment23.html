@@ -1,0 +1,47 @@
+
+<html>
+<body>
+<h1> First Experiment with SVG</h1>
+<h3> Revolving triangle indefinitely over a faded circle. This is my first experiment with SVG using codepen as reference</h3>
+<pre>
+  &lt;radialGradient id=&quot;baseGradient&quot;&gt;
+			&lt;stop offset=&quot;050%&quot; stop-color=&quot;#ff5&quot; /&gt;
+			&lt;stop offset=&quot;100%&quot; stop-color=&quot;#ccc&quot; /&gt;
+		&lt;/radialGradient&gt;
+	&lt;/defs&gt;
+
+	&lt;circle id=&quot;base&quot; cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;15&quot; fill=&quot;url(#baseGradient)&quot; stroke-width=&quot;1&quot; stroke=&quot;#aaa&quot;&gt;
+            &lt;animate attributeType=&quot;xml&quot; attributeName=&quot;r&quot; from=&quot;0&quot; to=&quot;25&quot; dur=&quot;1s&quot; /&gt;
+	&lt;/circle&gt;
+
+	&lt;path d=&quot;m50,15 l5,10 l-10,0 l5,-10 z&quot; fill=&quot;#eee3&quot; stroke=&quot;#aaa&quot;&gt;
+		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; from=&quot;0 50 50&quot; to=&quot;360 50 50&quot; dur=&quot;.5s&quot; repeatCount=&quot;indefinite&quot; /&gt;
+		&lt;animateTransform attributeName=&quot;transform&quot; type=&quot;scale&quot; from=&quot;0&quot; to=&quot;1&quot; dur=&quot;.5s&quot; /&gt;
+	&lt;/path&gt;
+</pre>   
+	 <h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week8/experiment23.html" target="_blank">Click Here</a>
+	 <h4>Reference </h4>
+	 <a href="http://codepen.io/search?q=svg+basic&limit=all&order=popularity&depth=everything&show_forks=false" target="_blank">Click Here</a>
+	 
+</body>	 
+</html>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#999">
+	<defs>
+		<radialGradient id="baseGradient">
+			<stop offset="050%" stop-color="#ff5" />
+			<stop offset="100%" stop-color="#ccc" />
+		</radialGradient>
+	</defs>
+
+	<circle id="base" cx="50" cy="50" r="15" fill="url(#baseGradient)" stroke-width="1" stroke="#aaa">
+            <animate attributeType="xml" attributeName="r" from="0" to="25" dur="1s" />
+	</circle>
+
+	<path d="m50,15 l5,10 l-10,0 l5,-10 z" fill="#eee3" stroke="#aaa">
+		<animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur=".5s" repeatCount="indefinite" />
+		<animateTransform attributeName="transform" type="scale" from="0" to="1" dur=".5s" />
+	</path>
+</svg>
+

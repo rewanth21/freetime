@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Collapse Experiment</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="H3"
+   <H3> Description: A collapse text experiment for my project using Javascript, HTML and CSS.</H3>
+
+
+
+   <H3> Instructions: Click on the Sun, Earth or Mars to see the text appear </h3>
+ </div>
+    
+  <div class="container">
+  <div class = "solar" id="solar">
+    <h2>Sun</h2>
+    <p>The Sun is by far the largest object in the solar system. 
+	   It contains more than 99.8% of the total mass of the Solar System</p>
+  </div>
+  <div class = "solar" id="solar">
+    <h2>Earth</h2>
+    <p>Earth, also called the world and, less frequently, is the third planet from the Sun, 
+	the densest planet in the Solar System, the largest of the Solar System's four terrestrial planets, 
+	and the only astronomical object known to accommodate life. </p>
+  </div>
+  <div class = "solar" id="solar">
+    <h2>Mars</h2>
+    <p>Mars is the fourth planet from the Sun and the second smallest planet 
+	   in the Solar System, after Mercury. </p>
+  </div>
+  <div class = "solar" id="solar">
+    <h2>Jupiter</h2>
+    <p>Jupiter is the fifth planet from the Sun and the largest planet in the Solar System. 
+	It is a giant planet with a mass one-thousandth of that of the Sun, but is two and a half 
+	times that of all the other planets in the Solar System combined.</p>
+  </div>
+</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/collapse.js"></script>
+<pre>
+	<h4> code snippet</h4>
+     if(clicks === 1) {
+          t = this;
+          timer = setTimeout(function(){
+              if($(&apos;p&apos;,t).is(&quot;:hidden&quot;)){
+                $(&apos;p&apos;).slideUp();       //perform single-click action
+                $(&apos;p&apos;,t).slideDown();
+              }
+              clicks = 0;               //after action performed, reset counter
+            }, DELAY);
+        } else {
+          clearTimeout(timer);    //prevent single-click action
+          if($(&apos;p&apos;).is(&quot;:visible&quot;)){
+            $(&apos;p&apos;).slideUp();     //perform double-click action
+          } else {
+            $(&apos;p&apos;).slideDown();    //perform double-click action
+          }
+          clicks = 0;             //after action performed, reset counter
+        }
+    })
+  
+</pre>
+
+<h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week8/experiment22.html" target="_blank">Click Here</a>
+	<h4>JS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week8/js/collapse.js" target="_blank">Click Here</a>
+
+	<h4>CSS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week8/css/style.css" target="_blank">Click Here</a>
+
+</body>
+
+
+</html>

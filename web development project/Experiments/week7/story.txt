@@ -1,0 +1,3 @@
+﻿../../story/whatisnext.htm?../Experiments/week7/story.txt         What's Next?
+experiment21.html Canvas change without using CSS
+

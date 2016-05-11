@@ -1,0 +1,8 @@
+﻿../../story/whatisnext.htm?../Experiments/week3/story.txt         What's Next?
+
+experiment9.html     Slideshow using Jquery 3
+
+experiment10.html    Disappearing text and slide stop 3
+
+experiment11.html    Calender 3
+

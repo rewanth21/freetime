@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>AngularJS Drag n Drop</title>
+
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="css/style1.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <div class="container" ng-app="dragndrop">
+		<div class="row">
+			<div class="span-12"><h4>Type in the text box to add new names to the list, delete all text in a box to remove it. Click and drag the <i class="fa fa-bars"></i> to reorder the names</h4></div>
+		</div>
+		<div class="row">
+			
+		</div>
+		<div class="row" ng-controller="dragndrop">
+			<div id="names" class="span-3 form-inline" role="form">
+				<div class="form-group btn btn-primary">Enter Names...</div>
+				<div class="form-group has-feedback transition" ng-repeat-reorder='name in names' ng-repeat-reorder-handle="i.fa.fa-bars">
+					<input class="form-control form-inline player" type='text'
+						tabindex='{{$index + 1}}'
+						ng-change='checkForNameDelete($index)'
+						ng-model='name.val'
+						ng-class="{'last-player': $index == names.length-1}">
+					<i class="fa fa-bars form-control-feedback"></i>
+				</div>
+				
+				<div class="form-group">
+					<input class="form-control form-inline" type='text'
+						ng-model='tempplayer'
+						tabindex='{{names.length + 1}}'
+						placeholder='Enter a name...'/>
+					</div>
+					<button ng-click="updateNames()">Add Name</button>
+				</div>
+			{{names}},{{tempplayer}}
+			</div>
+		</div>
+		
+	</div>
+
+	
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js'></script>
+    <script src='http://s.cdpn.io/61329/angular-hammer.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/61329/ngRepeatReorder.js'></script>
+
+  <script src="js/index1.js"></script>
+
+</body>
+<h4>code snippet</h4>
+<pre>
+&lt;div class=&quot;row&quot; ng-controller=&quot;dragndrop&quot;&gt;
+			&lt;div id=&quot;names&quot; class=&quot;span-3 form-inline&quot; role=&quot;form&quot;&gt;
+				&lt;div class=&quot;form-group btn btn-primary&quot;&gt;Enter Names...&lt;/div&gt;
+				&lt;div class=&quot;form-group has-feedback transition&quot; ng-repeat-reorder=&apos;name in names&apos; ng-repeat-reorder-handle=&quot;i.fa.fa-bars&quot;&gt;
+					&lt;input class=&quot;form-control form-inline player&quot; type=&apos;text&apos;
+						tabindex=&apos;{{$index + 1}}&apos;
+						ng-change=&apos;checkForNameDelete($index)&apos;
+						ng-model=&apos;name.val&apos;
+						ng-class=&quot;{&apos;last-player&apos;: $index == names.length-1}&quot;&gt;
+					&lt;i class=&quot;fa fa-bars form-control-feedback&quot;&gt;&lt;/i&gt;
+				&lt;/div&gt;
+				
+				&lt;div class=&quot;form-group&quot;&gt;
+					&lt;input class=&quot;form-control form-inline&quot; type=&apos;text&apos;
+						ng-model=&apos;tempplayer&apos;
+						tabindex=&apos;{{names.length + 1}}&apos;
+						placeholder=&apos;Enter a name...&apos;/&gt;
+					&lt;/div&gt;
+</pre>
+ <h4>CSS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/css/style.css" target="_blank">Click Here</a>
+  <h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/experiment16.html" target="_blank">Click Here</a>
+	<h4>JS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/js/index1.js" target="_blank">Click Here</a>
+</html>

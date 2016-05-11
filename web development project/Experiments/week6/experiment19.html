@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        
+        
+        <title>Webkit image Effects using Masks</title>
+
+      
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <h2>Mask Effects</h2>
+        </header>
+
+        <div id="examples">
+            <img class="type1" src="../../images/photos/logo.png" /> 
+            <img class="type2" src="../../images/photos/logo2.png" />
+            <img class="type3" src="../../images/photos/logo3.png" />
+            <img class="type4" src="../../images/photos/logo4.png" />
+        </div>
+		
+		<h4>code snippet</h4>
+		<pre>
+		#examples {
+    margin: 50px auto 0;
+    overflow: hidden;
+    width: 840px;
+}
+#examples img {
+    float: left;
+    margin: 10px;
+}
+
+.type3 {
+    -webkit-mask: url(../images/mask.png) no-repeat center center;
+}
+.type3:hover{
+    -webkit-animation: loop_frames 1s ease-in-out infinite;
+     -webkit-animation-direction:alternate;
+     -webkit-mask-size: auto 100%;
+}
+@-webkit-keyframes loop_frames {
+     0% { -webkit-mask-size: auto 100%; }
+     100% { -webkit-mask-size: auto 70%; }
+}
+</pre>
+ <h1>HTML Source Code</h1>
+    <a href="../../fileview/Default.aspx?~/Experiments/week6/experiment19.html" target="_blank">Click Here</a>
+    </body>
+	
+	<h4>CSS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week6/css/main.css" target="_blank">Click Here</a>
+</html>

@@ -1,0 +1,3 @@
+/*
+  Actually there is no JS needed. All you need to do is load AngularJS
+*/

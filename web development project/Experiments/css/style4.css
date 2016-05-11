@@ -1,0 +1,61 @@
+* {
+  font-size: 14px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #2E3641;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+input {
+  border: 0;
+  margin-right: 5px;
+  background: transparent;
+  border-bottom: 1px solid black;
+  width: 80px;
+  padding: 8px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+input:focus, input:active {
+  outline: 0;
+  width: 200px;
+  border-bottom-color: #F97D75;
+}
+
+button {
+  background-color: #F97D75;
+  border: 0;
+  padding: 8px 20px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:focus, button:active {
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 25px;
+}
+
+li {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.fa-close {
+  cursor: pointer;
+}
+
+[contenteditable]:focus, [contenteditable]:active {
+  outline: 0;
+}

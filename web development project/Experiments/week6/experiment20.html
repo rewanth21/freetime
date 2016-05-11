@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Ajax and Jquery Experiment</title>
+
+</head>
+
+   <body>
+
+  <h1>jQuery Ajax Tutorial</h1>
+  <h2>Instructions: Make a coffee order using Ajax</h2>
+
+<h2>Coffee orders</h2>
+
+<ul id="orders">
+</ul>
+
+<h4>Add a Coffee Order</h4>
+<p>name: <input type="text" id="name"/></p>
+<p>drink: <input type="text" id="drink"/></p>
+<button id="add-order">Add!</button>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/index6.js"></script>
+
+    </body>
+	<pre>
+	<h4> code snippet</h4>
+$.ajax({
+    type: &apos;GET&apos;,
+    url: &apos;http://rest.learncode.academy/api/henrik/orders&apos;,
+    success: function(data){
+      $.each(data, function(i, item){
+        $orders.append(&apos;&lt;li&gt;Name:&apos;+item.name+&apos;, age&apos;+item.drink+&apos;&lt;/li&gt;&apos;)
+      });
+    },
+    error: function(){
+      alert: &apos;Something went wrong!&apos;;
+    }
+  });
+  
+  $(&apos;#add-order&apos;).on(&apos;click&apos;, function(){
+    
+    var order = {
+      name: $name.val(),
+      drink: $drink.val()
+    };
+    
+     $.ajax({
+      type: &apos;POST&apos;,
+      url: &apos;http://rest.learncode.academy/api/henrik/orders&apos;,
+      data: order,
+      success: function(newOrder){
+        $orders.append(&apos;&lt;li&gt;Name:&apos;+newOrder.name+&apos;, drink:&apos;+newOrder.drink+&apos;&lt;/li&gt;&apos;);
+      }
+    });
+  
+</pre>
+<h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week6/experiment20.html" target="_blank">Click Here</a>
+	<h4>JS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week6/js/index6.js" target="_blank">Click Here</a>
+</body>
+</html>

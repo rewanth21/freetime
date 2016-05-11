@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Content toggle with AngularJS</title>
+
+    <link rel="stylesheet" href="/home/v4.0/Experiments/week5/css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <div class="page-wrap" ng-app>
+
+  <h1 class="headline">Content toggle with AngularJS</h1>
+  <p>
+    Choose what to display:
+      <select class="content-select" ng-model="selection">
+        <option value="content1">Content #1</option>
+        <option value="content2">Content #2</option>
+       
+    </select>
+  </p>
+
+  <div class="container">
+    <article ng-show="selection == 'content1'">
+      <h2 class="h2">Content 1</h2>
+        <p>Space is the boundless three-dimensional extent in which objects and events have relative position and direction. Physical space is often conceived in three linear dimensions, although modern physicists usually consider it, with time, to be part of a boundless four-dimensional continuum known as spacetime</p>
+    </article>
+    <article ng-show="selection == 'content2'">
+      <h2 class="h2">Content 2</h2>
+      <p>In mathematics, "spaces" are examined with different numbers of dimensions and with different underlying structures. The concept of space is considered to be of fundamental importance to an understanding of the physical universe. </p>
+   
+  </div>
+ 
+</div>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.1/angular.min.js'></script>
+
+  <script src="js/index.js"></script>
+
+	
+	 
+ <h4>code snippet</h4>
+<pre>
+body {
+  padding: 3em 2em;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.page-wrap {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.headline {
+  margin: 0 0 0.7em 0;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.content-select {
+  margin: 0 0 0 1em;
+}
+
+article {
+  margin: 3em 0 0 0;
+}
+article p {
+  margin: 0 0 0.5em 0;
+  line-height: 1.3;
+}
+article .h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+}
+</pre> 
+
+ <h4>CSS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/css/style.css" target="_blank">Click Here</a>
+  <h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/experiment15.html" target="_blank">Click Here</a>
+</body>
+
+
+</html>

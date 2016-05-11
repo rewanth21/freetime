@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>The Non-CSS Clip</title>
+  <h1> The aim of this experiment is to show a non-css clip</h1>
+  <h3>About the experiment</h3>
+        <hr />
+       
+        <p>It uses div blocks to show the text and as you scroll down the text and colour change </p>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="page" data-color="hsla(170, 95%, 25%, 1)">&#8595; SCROLL DOWN &#8595;</div>
+<div class="page" data-color="hsla(58, 95%, 55%, 1)">HELLO</div>
+<div class="page" data-color="hsla(267, 95%, 15%, 1)">HOW ARE YOU?</div>
+<div class="page" data-color="hsla(351, 95%, 55%, 1)">NOT CSS</div>
+<div class="page" data-color="hsla(120, 95%, 45%, 1)">IT'S CANVAS</div>
+<div class="page" data-color="hsla(214, 95%, 45%, 1)">YES!!</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/index.js"></script>
+  
+  
+ <h4>code snippet</h4>
+<pre>
+function image(p, prevC){
+  var c = document.createElement(&apos;canvas&apos;),
+      $ = c.getContext(&apos;2d&apos;);
+  
+  c.width = p.offsetWidth;
+  c.height = p.offsetHeight;
+  
+  $.globalCompositeOperation = &apos;xor&apos;;
+  $.fillStyle = p.dataset.color;
+  $.fillRect(0, 0, c.width, c.height);
+  
+  $.font = &apos;100px Nunito, sans-serif&apos;;
+  $.textAlign = &apos;center&apos;;
+  $.fillText(p.textContent, c.width / 2, c.height / 2, c.width);
+  if (prevC){
+    $.globalCompositeOperation = &apos;destination-over&apos;;
+    $.drawImage(prevC, 0, 0);
+  }
+  
+&lt;div class=&quot;page&quot; data-color=&quot;hsla(170, 95%, 25%, 1)&quot;&gt;&amp;#8595; SCROLL DOWN &amp;#8595;&lt;/div&gt;
+&lt;div class=&quot;page&quot; data-color=&quot;hsla(58, 95%, 55%, 1)&quot;&gt;HELLO&lt;/div&gt;
+&lt;div class=&quot;page&quot; data-color=&quot;hsla(267, 95%, 15%, 1)&quot;&gt;HOW ARE YOU?&lt;/div&gt;
+&lt;div class=&quot;page&quot; data-color=&quot;hsla(351, 95%, 55%, 1)&quot;&gt;NOT CSS&lt;/div&gt;
+&lt;div class=&quot;page&quot; data-color=&quot;hsla(120, 95%, 45%, 1)&quot;&gt;IT&apos;S CANVAS&lt;/div&gt;
+&lt;div class=&quot;page&quot; data-color=&quot;hsla(214, 95%, 45%, 1)&quot;&gt;YES!!&lt;/div&gt;
+</pre> 
+  
+  
+  
+<h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week7/experiment21.html" target="_blank">Click Here</a>
+<h3>CSS Source Code</h3>
+    <a href="../../fileview/Default.aspx?~/Experiments/week7/css/style.css" target="_blank">Click Here</a>
+	
+	
+
+</body>
+
+</html>

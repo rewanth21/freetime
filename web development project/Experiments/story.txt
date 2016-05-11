@@ -1,0 +1,14 @@
+﻿../story/whatisnext.htm?../Experiments/story.txt         What's Next?
+
+
+../story/index.htm?../Experiments/week1/story.txt week 1
+../story/index.htm?../Experiments/week2/story.txt week 2
+../story/index.htm?../Experiments/week3/story.txt week 3
+../story/index.htm?../Experiments/week4/story.txt week 4
+../story/index.htm?../Experiments/week5/story.txt week 5
+../story/index.htm?../Experiments/week6/story.txt week 6
+../story/index.htm?../Experiments/week7/story.txt week 7
+../story/index.htm?../Experiments/week8/story.txt week 8
+../story/index.htm?../Experiments/week9/story.txt week 9
+http://www.w3schools.com/html/default.asp   HTML Reference for Experiments 
+http://codepen.io/ Codepen Reference for Experiments

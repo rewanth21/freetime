@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title> Add and Remove Items to a list</title>
+
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,200,900,700,600,300italic'>
+
+    <link rel="stylesheet" href="css/style4.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <html lang="en" ng-app="addSkills">
+<head>
+</head>
+<body ng-controller="addSkillsController">
+<h1> Instructions: Add a skill and hit enter key to see the added skill to anew list at the bottom </h1>
+   <h1>Add your Skills</h1>
+
+  <form name="skillsFrm" ng-submit="addSkill()">
+     <input type="text" name="newSkill" ng-model="newSkill" required />
+     <button ng-disabled="skillsFrm.$invalid" ng-click="addSkill()">Add</button>
+  </form>
+
+  <ul>
+    <li ng-repeat="skill in skills" class="{'fadeOut' : skill.done}">
+      <span class="fa fa-close" ng-click="deleteSkill($index)"></span>
+      <span>{{skill.title}}</span>
+    </li>
+  </ul>
+  <h4>code snippet</h4>
+<pre>
+&lt;form name=&quot;skillsFrm&quot; ng-submit=&quot;addSkill()&quot;&gt;
+     &lt;input type=&quot;text&quot; name=&quot;newSkill&quot; ng-model=&quot;newSkill&quot; required /&gt;
+     &lt;button ng-disabled=&quot;skillsFrm.$invalid&quot; ng-click=&quot;addSkill()&quot;&gt;Add&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;ul&gt;
+    &lt;li ng-repeat=&quot;skill in skills&quot; class=&quot;{&apos;fadeOut&apos; : skill.done}&quot;&gt;
+      &lt;span class=&quot;fa fa-close&quot; ng-click=&quot;deleteSkill($index)&quot;&gt;&lt;/span&gt;
+      &lt;span&gt;{{skill.title}}&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+</pre>
+<h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/experiment18.html" target="_blank">Click Here</a>
+	
+	
+	<h4>JS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week5/js/index4.js" target="_blank">Click Here</a>
+	  <script src='http://codepen.io/assets/libs/fullpage/angular.js'></script>
+
+  <script src="js/index4.js"></script>
+ 
+</body>
+</html>
+

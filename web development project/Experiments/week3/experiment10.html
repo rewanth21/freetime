@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown(8000);
+    });
+    $("#stop").click(function(){
+        $("#panel").stop();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide("slow", function(){
+            alert("The paragraph is now hidden");
+        });
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<button>Hide</button>
+
+<p>Hello Rev. How are you.</p>
+
+ 
+<button id="stop">Stop sliding</button>
+
+<div id="flip">Click to slide down </div>
+<div id="panel">Hello Rev!</div>
+
+<pre>
+#panel, #flip {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+	
+	#panel, #flip {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</pre>
+<h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week3/experiment10.html" target="_blank">Click Here</a>
+</body>
+
+
+</html>

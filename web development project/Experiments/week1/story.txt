@@ -1,0 +1,8 @@
+﻿../../story/whatisnext.htm?../Experiments/week1/story.txt         What's Next?
+
+experiment1.html     Basic HTML experiment 1 Tags 1
+
+experiment2.html     Basic HTML experiment 2 Form 1
+
+experiment3.html     Basic HTML experiment 3 Buttons and Table 1
+

@@ -1,0 +1,4 @@
+﻿../../story/whatisnext.htm?../Experiments/week9/story.txt         What's Next?
+
+experiment24.html Experiment using CSS to place a solar system homepage
+experiment25.html Experiment using CSS to place a solar system with animation

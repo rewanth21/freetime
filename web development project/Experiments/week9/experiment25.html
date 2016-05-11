@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Solar System with Animation</title>
+
+    <link rel="stylesheet" href="css/style2.css">
+
+</head>
+
+<body>
+<H1> Description</H1>
+<h2> This experiment shows a static solar system with animation. Hover over the content on the right</h2>
+
+  <section class="clearfix">
+
+	<ul class="solarsystem">
+	  <li class="sun"><a href="#sun"><span>Sun</span></a></li>
+	  <li class="mercury"><a href="#mercury"><span>Mercury</span></a></li>
+	  <li class="venus"><a href="#venus"><span>Venus</span></a></li>
+	  <li class="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
+	  <li class="mars"><a href="#mars"><span>Mars</span></a></li>
+	  <li class="asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
+	  <li class="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
+	  <li class="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
+	  <li class="uranus"><a href="#uranus"><span>Uranus</span></a></li>
+	  <li class="neptune"><a href="#neptune"><span>Neptune</span></a></li>
+	  <li class="pluto"><a href="#pluto"><span>Pluto</span></a></li>
+	</ul>
+
+	<ul id="descriptions">
+		<li>
+		<h2 id="sun">Sun</h2>
+		<p>The Sun is a star, a hot ball of glowing gases at the heart of our solar system. Its influence extends far beyond the orbits of distant Neptune and Pluto. Without the Sun's intense energy and heat, there would be no life on Earth. And though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.</p>
+		</li>
+
+		<li>
+		<h2 id="mercury">Mercury</h2>
+		<p>Sun-scorched Mercury is only slightly larger than Earth's Moon. Like the Moon, Mercury has very little atmosphere to stop impacts and it is covered with craters. Mercury's dayside is super heated by the Sun, but at night temperatures drop hundreds of degrees below freezing. Ice may even exist in craters. Mercury's egg-shaped orbit takes it around the Sun every 88 days.</p>
+		</li>
+
+		<li>
+		<h2 id="venus">Venus</h2>
+		<p>Venus is a dim world of intense heat and volcanic activity. Similar in structure and size to Earth, Venus' thick, toxic atmosphere traps heat in a runaway 'greenhouse effect.' The scorched world has temperatures hot enough to melt lead. Glimpses below the clouds reveal volcanoes and deformed mountains. Venus spins slowly in the opposite direction of most planets.</p>
+		</li>
+
+		<li>
+		<h2 id="earth">Earth</h2>
+		<p>Earth is an ocean planet. Our home world's abundance of water - and life - makes it unique in our solar system. Other planets, plus a few moons, have ice, atmospheres, seasons and even weather, but only on Earth does the whole complicated mix come together in a way that encourages life - and lots of it.</p>
+		</li>
+
+		<li>
+		<h2 id="mars">Mars</h2>
+		<p>Though details of Mars' surface are difficult to see from Earth, telescope observations show seasonally changing features and white patches at the poles. For decades, people speculated that bright and dark areas on Mars were patches of vegetation, that Mars could be a likely place for life-forms, and that water might exist in the polar caps. When the Mariner 4 spacecraft flew by Mars in 1965, many were shocked to see photographs of a bleak, cratered surface. Mars seemed to be a dead planet. Later missions, however, have shown that Mars is a complex member of the solar system and holds many mysteries yet to be solved.</p>
+		</li>
+
+		
+	</ul>
+
+</section>
+<pre>
+	<h4> code snippet</h4>
+    ul.solarsystem li.sun {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #fc3;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.22, rgb(204,153,0)),
+        color-stop(1, rgb(255,219,112))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(204,153,0) 22%,
+        rgb(255,219,112) 100%
+    );
+    top: 302px;
+    left: 462px;
+    border: none;
+    -webkit-box-shadow: 0 0 50px #c90;
+    -moz-box-shadow: 0 0 50px #c90;
+    box-shadow: 0 0 50px #c90;
+    z-index: 100;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+ul.solarsystem li.sun span {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;   
+}
+
+ul#descriptions {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    list-style: none;
+}
+ul#descriptions h2 {
+    cursor: pointer;
+    color: #386077;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    font-size: 20px;
+    position: relative;
+    z-index: 101;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+	margin-bottom: -15px;
+}
+ul#descriptions h2:hover {
+   color: #aa4200; 
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
+}
+ul#descriptions li p {
+    position: absolute;
+    left: -250px;
+    top: 0;
+    width: 200px;
+    display: inline;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    background: #0f132c;
+    padding: 30px;
+    color: #767892;
+    line-height: 1.7;
+    z-index: 100;
+    border: 1px solid #1c203c;
+}
+ul#descriptions h2:hover+p {
+    visibility: visible;
+    opacity: 0.9;
+    left: -280px;
+}
+
+  ul.solarsystem li.mercury {-webkit-animation-duration:5s; -moz-animation-duration:5s;}
+ul.solarsystem li.venus {-webkit-animation-duration:8s; -moz-animation-duration:8s;}
+ul.solarsystem li.earth {-webkit-animation-duration:12s; -moz-animation-duration:12s;}
+ul.solarsystem li.earth span {-webkit-animation-duration:2s; -moz-animation-duration:2s;}
+ul.solarsystem li.mars {-webkit-animation-duration:20s; -moz-animation-duration:20s;}
+ul.solarsystem li.asteroids_meteorids {-webkit-animation-duration:50s; -moz-animation-duration:50s;}
+</pre>
+
+
+<h4>HTML Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week9/experiment25.html" target="_blank">Click Here</a>
+	<h4>JS Source Code</h4>
+    <a href="../../fileview/Default.aspx?~/Experiments/week9/css/style2.css" target="_blank">Click Here</a>
+
+
+
+
+</body>
+
+</html>
