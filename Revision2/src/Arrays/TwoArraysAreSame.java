@@ -51,7 +51,7 @@ public class TwoArraysAreSame {
 		if(same)
 			System.out.println("Both arrays are the same");
 		else
-			System.out.println("Both arrays are not the same");
+			System.out.println("Both arrays are not  the same");
 		
 		
 	}

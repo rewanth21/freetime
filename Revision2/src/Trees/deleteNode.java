@@ -52,12 +52,12 @@ public class deleteNode {
 			}
 			else if(root.right == null){
 				Node temp = root;
-				root = root.right;
+				root = root.left;
 				temp = null;
 			}
 			else if(root.left == null){
 				Node temp = root;
-				root = root.left;
+				root = root.right;
 				temp = null;
 			}
 			//case 3 : 2 children 

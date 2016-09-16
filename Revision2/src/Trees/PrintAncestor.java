@@ -36,7 +36,7 @@ static Stack<Node> stack = new Stack<>();
 		}
 		
 		if(root.data == element){
-			stack.push(root);
+			//stack.push(root);
 			//System.out.println(root.data);
 			return true;
 		}
@@ -44,7 +44,7 @@ static Stack<Node> stack = new Stack<>();
 		if(ancestor(root.left, element) || 
 				ancestor(root.right, element)){
 			stack.push(root);
-			//System.out.println(root.data);
+			System.out.println(root.data);
 			return true;
 		}
 	return false;

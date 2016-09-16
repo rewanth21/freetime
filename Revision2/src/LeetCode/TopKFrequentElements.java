@@ -12,7 +12,7 @@ public class TopKFrequentElements {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Integer[] array = {1,1,1,1,2,3,2,3,2, 4, 4, 4, 4,4,4};
-		int n = 3;
+		int n = 4;
 
 		TopKElements(array, n);
 	}
@@ -40,28 +40,11 @@ public class TopKFrequentElements {
 						()).compareTo(((Map.Entry)(obj1)).getValue()); 
 			}
 		});
-		//System.out.println(list);
 		
 		for(int i = 0; i < n;i++){
 			System.out.println(list.get(i));
 		}
 	}
-
-
-	/*int counter =0;
-		for(Map.Entry<Integer,Integer> entry : map.entrySet()) {
-			  Integer key = entry.getKey();
-			  Integer value = entry.getValue();
-
-
-			  if(counter<n){
-				  System.out.println(key + " " + value);
-				  counter++;
-			  }
-
-	}*/
-
-
 
 
 

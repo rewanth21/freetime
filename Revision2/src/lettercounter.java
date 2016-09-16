@@ -7,17 +7,42 @@ public class lettercounter {
         
 	}
 	
+	
 	public static void countLetters(String str1){
+		String str = "";
+		char last = str1.charAt(0);
+		
+		int counter = 1;
+		
+		for(int i = 1; i < str1.length();i++){
+			if(str1.charAt(i) == last){
+				counter++;
+				
+			}
+			else{
+				str = str + last + "" + counter;
+				last = str1.charAt(i);
+				counter = 1;
+			}
+			
+		}
+		
+		System.out.println(str+ last + counter);
+		
+	}
+	
+	
+	
+	
+	/*public static void countLetters(String str1){
 		  String s = "";
 		  char last = str1.charAt(0);
 		  
 		  int counter = 1;
 		  
 		  for(int i = 1; i < str1.length(); i++){
-			  if(str1.charAt(i) == last){
-				  
-				  counter++;
-				  
+			  if(str1.charAt(i) == last){ 
+				  counter++;	  
 			  }
 			  else{
 				  s += last + "" + counter;
@@ -27,6 +52,6 @@ public class lettercounter {
 		  }
 		  System.out.println(s + last + counter);
 		
-	}
+	}*/
 
 }
